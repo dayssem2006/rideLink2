@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RideLink — شارك الرحلة</title>
+  <style>
+    /* Simple modern CSS, responsive */
+    :root{
+      --bg:#0f0f10;
+      --card:#121214;
+      --accent-1:#4DB6FF; /* sky blue */
+      --accent-2:#00E676; /* mint green */
+      --muted:#9aa3ad;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#0b0b0c);color:#e9eef3;display:flex;align-items:center;justify-content:center}
+    .container{width:100%;max-width:1100px;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+    .logo-wrap{display:flex;align-items:center;gap:12px}
+    .logo-sq{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent-1));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(77,182,255,0.07)}
+    .brand{font-weight:700;font-size:20px;letter-spacing:0.2px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+
+    .title{font-size:34px;margin:0 0 10px;line-height:1.05}
+    .tag{color:var(--muted);margin-bottom:18px}
+    .cta-row{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#061018}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .feat{background:var(--glass);padding:12px;border-radius:10px}
+    .feat h4{margin:0 0 6px;font-size:15px}
+    .feat p{margin:0;color:var(--muted);font-size:13px}
+
+    .preview{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:20px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:12px}
+    .mock{width:100%;height:260px;border-radius:10px;background:linear-gradient(135deg,#07101a 0%, #081116 40%);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.06);font-weight:700}
+
+    .how{margin-top:18px}
+    .steps{display:flex;gap:12px;margin-top:12px}
+    .step{flex:1;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px}
+    .step h5{margin:0 0 6px}
+    .step p{margin:0;color:var(--muted);font-size:13px}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr}
+      .mock{height:200px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-wrap">
+        <div class="logo-sq">RL</div>
+        <div>
+          <div class="brand">RideLink</div>
+          <div style="color:var(--muted);font-size:13px">شارك الرحلة. وفّر الوقت. وفرّق المصاريف.</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h1 class="title">ركّب مع RideLink — الطريق أقرب كي نتشاركوه</h1>
+        <p class="tag">صفحة تعرّيفية سريعة للتطبيق: trailer تبين الفكرة للناس والمستثمرين قبل ما نطوّروا التطبيق.</p>
+
+        <div class="cta-row">
+          <button class="btn btn-primary">سجّل حضورك (Beta)</button>
+          <button class="btn btn-outline">شوف كيفاش يخدم</button>
+        </div>
+
+        <div class="features">
+          <div class="feat"><h4>مبني على الثّقة</h4><p>نظام تقييم وملفّات شخصية باش تعرف مع مين تركب.</p></div>
+          <div class="feat"><h4>مناسب لتونس</h4><p>خيارات بحث على المسارات المحلية والمواعيد المرنة.</p></div>
+          <div class="feat"><h4>احتساب تلقائي للمصاريف</h4><p>ما تكسرش راسك بالحساب — التطبيق يقترح تقسيمة عادلة.</p></div>
+          <div class="feat"><h4>آمن وموثوق</h4><p>تأكّد من هوية السائق والركاب قبل الرحلة.</p></div>
+        </div>
+
+        <div class="how">
+          <h3 style="margin:14px 0 6px">كيفاش تخدم (بسيط)</h3>
+          <div class="steps">
+            <div class="step"><h5>1. أعلن الرحلة</h5><p>السائق ينجم ينشر مساره وبلايصو الفاضية.</p></div>
+            <div class="step"><h5>2. انضمّ كراكب</h5><p>المسافر يشوف الرحلات وينضمّ بضغط زرّ.</p></div>
+            <div class="step"><h5>3. تقاسم المصاريف</h5><p>التطبيق يقترح قيمة عادلة وتكمّل الإتفاق.</p></div>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card preview">
+          <div style="text-align:center;color:var(--muted);font-size:13px">معاينة واجهة سريعة (mockup)</div>
+          <div class="mock">[Mockup App / Screenshot]</div>
+
+          <div style="width:100%;display:flex;gap:10px;margin-top:8px">
+            <input style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" placeholder="اكتب إيميلك باش تصلك الدعوة" />
+            <button class="btn btn-primary">ابعتلي</button>
+          </div>
+
+          <div style="color:var(--muted);font-size:12px;margin-top:8px;text-align:center">ما نبعثوش spam — غير دعوات البيتا والمستجدات.</div>
+        </div>
+      </aside>
+    </main>
+
+  </div>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("CTykxzP3tA7FCK7BH");
+  })();
+
+  function submitEmail(){
+    const e = document.getElementById('email');
+    const success = document.getElementById('emailSuccess');
+    if(!e.value || !e.value.includes('@')) {
+      e.style.borderColor = 'rgba(255,80,80,0.6)';
+      e.focus();
+      return;
+    }
+
+    // Send email
+    emailjs.send("service_au6l72v", "template_jnt4039", {
+      from_email: e.value
+    }).then(function() {
+        success.style.display = 'block';
+        setTimeout(()=> success.style.display='none',3500);
+        e.value='';
+    }, function(error) {
+        alert('⚠️ صار مشكل في الإرسال');
+    });
+  }
+</script>
+ 
+</body>
+</html>
